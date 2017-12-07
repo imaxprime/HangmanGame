@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Hangman</title>
+	
+	<!--Bootstrap-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+</head>
+<body>
+
+	<div class="container">
+		<div class="jumbotron bg-dark text-white">
+			<h1>Hangman Game</h1>
+			<p>Guess the word</p>
+		</div>
+
+		<div class="card text-white bg-dark mb-3">
+  			<div class="card-header">Word to Guess</div>
+ 				<div class="card-body">
+   					<h2 class="card-title">_ _ _ _ _ _ _ </h2>
+	  			</div>
+			</div>
+
+		<div class="card text-white bg-dark mb-3">
+			<div class="card-body">
+				Wrong Guessed: <span id="wrongGuesses"></span>
+			</div>
+		</div>
+
+		<div class="card text-white bg-dark mb-3">
+			<div class="card-body">
+				 Guesses Left: <span id="numGuesses"></span>
+			</div>
+		</div>
+
+		<div class="card text-white bg-dark mb-3">
+			<div class="card-body">
+				Win Counter: <span id="winCounter"></span>
+			</div>
+		</div>
+
+		<div class="card text-white bg-dark mb-3">
+			<div class="card-body">
+				Loss Counter: <span id="lossCounter"></span>
+			</div>
+		</div>
+	</div>
+
+
+
+</body>
+</html>
