@@ -11,36 +11,43 @@
 <body>
 
 	<div class="container">
+
+		<!--Title/Header Section-->
 		<div class="jumbotron bg-dark text-white">
 			<h1>Hangman Game</h1>
 			<p>Guess the word</p>
 		</div>
-
+		
+		<!--Word Person is Guessing Card-->
 		<div class="card text-white bg-dark mb-3">
   			<div class="card-header">Word to Guess</div>
  				<div class="card-body">
-   					<h2 class="card-title">_ _ _ _ _ _ _ </h2>
+   					<h2 id="wordToGuess">_ _ _ _ _ _ _ </h2>
 	  			</div>
 			</div>
-
+		
+		<!--Card with wrong guesses-->
 		<div class="card text-white bg-dark mb-3">
 			<div class="card-body">
 				Wrong Guessed: <span id="wrongGuesses"></span>
 			</div>
 		</div>
 
+		<!--Card with number of guesses left-->
 		<div class="card text-white bg-dark mb-3">
 			<div class="card-body">
 				 Guesses Left: <span id="numGuesses"></span>
 			</div>
 		</div>
 
+		<!--Card with win totals-->
 		<div class="card text-white bg-dark mb-3">
 			<div class="card-body">
 				Win Counter: <span id="winCounter"></span>
 			</div>
 		</div>
 
+		<!--Card with loss totals-->
 		<div class="card text-white bg-dark mb-3">
 			<div class="card-body">
 				Loss Counter: <span id="lossCounter"></span>
@@ -48,6 +55,9 @@
 		</div>
 	</div>
 
+
+<!--Javascript Link-->
+<script src="assets/javascript/game.js"></script>
 
 
 </body>
