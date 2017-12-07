@@ -1,4 +1,6 @@
-var wordOptions = ["test", "words", "are", "written", "here"];
+// Variables
+
+var wordOptions = ["keyboard", "mouse", "monitor", "case", "motherboard", "processor", "fans", "microphone", "mousepad", "psu", "gpu", "memory"];
 var selectedWord = "";
 var lettersinWord = [];
 var numBlanks = 0;
@@ -8,6 +10,8 @@ var wrongLetters = [];
 var winCount = 0;
 var lossCount = 0;
 var guessesLeft = 9;
+
+// Functions
 
 function startGame () {
 	selectedWord = wordOptions[Math.floor(Math.random() * wordOptions.length)];
@@ -27,10 +31,6 @@ function startGame () {
 	document.getElementById("winCounter").innerHTML = winCount;
 	document.getElementById("lossCounter").innerHTML = lossCount;
 
-	console.log(selectedWord);
-	console.log(lettersinWord);
-	console.log(numBlanks);
-	console.log(blanksandSuccesses);
 }
 
 
@@ -39,14 +39,14 @@ function checkLetters(letter) {
 	var isLetterInWord = false;
 
 	for (var i=0; i<numBlanks; i++){
-		if(selectedWord[i] == letter) {
+		if(selectedWord[i] === letter) {
 			isLetterInWord = true;
 		}
 	}
 
 	if(isLetterInWord) {
 		for (var i=0; i<numBlanks; i++) {
-			if(selectedWord[i] == letter) {
+			if(selectedWord[i] === letter) {
 			blanksandSuccesses[i] = letter;
 			}
 		}
@@ -57,9 +57,6 @@ function checkLetters(letter) {
 		guessesLeft--
 	}
 
-	console.log(blanksandSuccesses);
-
-
 }
 
 function roundComplete(){
@@ -69,7 +66,7 @@ function roundComplete(){
 	document.getElementById("wordToGuess").innerHTML = blanksandSuccesses.join(" ");
 	document.getElementById("wrongGuesses").innerHTML = wrongLetters.join(" ");
 
-	if (lettersinWord.toString() == blanksandSuccesses.toString()) {
+	if (lettersinWord.toString() === blanksandSuccesses.toString()) {
 		winCount++;
 		alert("YOU WON!");
 	
@@ -78,7 +75,7 @@ function roundComplete(){
 		startGame();
 	}
 
-	else if (guessesLeft == 0) {
+	else if (guessesLeft === 0) {
 		lossCount++;
 		alert ("YOU LOST!");
 
@@ -95,7 +92,5 @@ document.onkeyup = function(event) {
 	var letterGuessed = String.fromCharCode(event.keyCode).toLowerCase();
 	checkLetters(letterGuessed);
 	roundComplete();
-
-	console.log(letterGuessed);
 
 }

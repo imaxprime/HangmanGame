@@ -5,21 +5,31 @@
 	<title>Hangman</title>
 	
 	<!--Bootstrap-->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" 
+	crossorigin="anonymous">
+	<!--Font-->
+	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+	<!--css-->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
 
 </head>
 <body>
+	<div class="page">
 
 	<div class="container">
 
 		<!--Title/Header Section-->
-		<div class="jumbotron bg-dark text-white">
-			<h1>Hangman Game</h1>
-			<p>Guess the word</p>
+		<br>
+		<div class="card bg-dark text-success">
+			<h1>Computer Part Hangman</h1>
+			<h6>Use your keyboard to guess the computer part!</h6>
 		</div>
+
+		<p class="topGap"></p>
 		
 		<!--Word Person is Guessing Card-->
-		<div class="card text-white bg-dark mb-3">
+		<div class="card text-success bg-dark mb-3 col-lg-7">
   			<div class="card-header">Word to Guess</div>
  				<div class="card-body">
    					<h2 id="wordToGuess">_ _ _ _ _ _ _ </h2>
@@ -27,33 +37,35 @@
 			</div>
 		
 		<!--Card with wrong guesses-->
-		<div class="card text-white bg-dark mb-3">
+		<div class="card text-success bg-dark mb-3 col-lg-7">
 			<div class="card-body">
 				Wrong Guessed: <span id="wrongGuesses"></span>
 			</div>
 		</div>
 
 		<!--Card with number of guesses left-->
-		<div class="card text-white bg-dark mb-3">
+		<div class="card text-success bg-dark mb-3 col-lg-7">
 			<div class="card-body">
 				 Guesses Left: <span id="numGuesses"></span>
 			</div>
 		</div>
 
 		<!--Card with win totals-->
-		<div class="card text-white bg-dark mb-3">
+		<div class="card text-success bg-dark mb-3 col-lg-7">
 			<div class="card-body">
 				Win Counter: <span id="winCounter"></span>
 			</div>
 		</div>
 
 		<!--Card with loss totals-->
-		<div class="card text-white bg-dark mb-3">
+		<div class="card text-success bg-dark mb-3 col-lg-7">
 			<div class="card-body">
 				Loss Counter: <span id="lossCounter"></span>
 			</div>
 		</div>
+		<p class="bottomGap"></p>
 	</div>
+</div>
 
 
 <!--Javascript Link-->
